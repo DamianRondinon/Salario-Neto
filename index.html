@@ -20,7 +20,8 @@
         <tr>
           <td>Puesto</td>
           <td>Horas</td>
-          <td>Años</td>
+          <td>Meses</td>
+          <td>Horas Extras</td>
         </tr>
         <tr>
           <td>
@@ -33,7 +34,7 @@
           <td>
             <select id="horas" class="form-control" onchange="calcularSalarioNeto()">
               <script>
-                for (var i = 0; i <= 50; i++) {
+                for (var i = 0; i <= 400; i++) {
                   document.write(
                     "<option value='" + i + "'>" + i + "</option>"
                   );
@@ -42,7 +43,18 @@
             </select>
           </td>
           <td>
-            <select id="anios" class="form-control" onchange="calcularSalarioNeto()">
+            <select id="meses" class="form-control" onchange="calcularSalarioNeto()">
+                <script>
+                  for (var i = 0; i <= 40; i++) {
+                    document.write(
+                      "<option value='" + i + "'>" + i + "</option>"
+                    );
+                  }
+                </script>
+              </select>
+          </td>
+          <td>
+            <select id="horasAgregadas" class="form-control" onchange="calcularSalarioNeto()">
                 <script>
                   for (var i = 0; i <= 40; i++) {
                     document.write(
@@ -72,16 +84,16 @@
             <td><span id="obraSocial"></span></td>
         </tr>
         <tr>
-            <td>Primas</td>
-            <td><span id="primas"></span></td>
+            <td>Comisiones</td>
+            <td><span id="comisiones"></span></td>
             <td>Sindicato</td>
             <td><span id="sindicato"></span></td>
         </tr>
         <tr>
-            <td>Comisiones</td>
-            <td><span id="comisiones"></span></td>
             <td></td>
-            <td></td>
+            <td></span></td>
+            <td>Aporte Jubilatorio</td>
+            <td><span id="aporteJubilatorio"></span></td>
         </tr>
         <tr>
             <td><h6>Total Percepciones</h6></td>
